@@ -1,17 +1,20 @@
 package com.seaboxdata.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.seaboxdata.model.MdsObjectMysql;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 
 /**
  * ClassName:    MdsObjectMysqlMapper
  * Package:    com.seaboxdata.mapper
  * Description:
- * Datetime:    2021年01月12日   15:13
+ * Datetime:    2021年01月14日   16:57
  * Author:     LiuZhanXi
  */
-@Repository
-public interface MdsObjectMysqlMapper extends MongoRepository<MdsObjectMysql, Long> {
+@Mapper
+public interface MdsObjectMysqlMapper extends BaseMapper<MdsObjectMysql> {
 
+    @Update("truncate table mds_object_mysql")
+    void deleteMdsObjectMysql();
 }
