@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: P@ssw0rd
-    url: jdbc:mysql://127.0.0.1:3306/mds_server_deploy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true
+    url: jdbc:mysql://169.254.153.55:3306/mds_server_deploy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true
     hikari:
       connection-timeout: 20000
       minimum-idle: 1
@@ -16,5 +16,5 @@ spring:
       auto-commit: true
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/mds_server_sheng
+      uri: mongodb://169.254.153.55:27017/mds_server_sheng
       field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
